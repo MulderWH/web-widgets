@@ -3,6 +3,7 @@ $background-color: #fff !default;
 $selected-color: #dadcde !default;
 $border-color: #ced0d3 !default;
 $arrow: "resources/dropdown-arrow.svg";
+$form-input-border-radius: 5px;
 
 @import "date-picker";
 
@@ -43,6 +44,8 @@ $arrow: "resources/dropdown-arrow.svg";
             padding: 8px;
             border-top-right-radius: 0;
             border-bottom-right-radius: 0;
+            border-top-left-radius: $form-input-border-radius; // use same border radius as input textbox
+            border-bottom-left-radius: $form-input-border-radius;
             border-right: none;
             height: 100%;
 
@@ -53,6 +56,12 @@ $arrow: "resources/dropdown-arrow.svg";
                 padding-left: 4px; /* The font has spaces in the right side, so to align in the middle we need this */
             }
         }
+
+        //  use same border radius as input textbox for datepicker
+		.btn,
+		.mx-button {
+			border-radius: $form-input-border-radius;
+		}
 
         .filter-selectors {
             position: absolute;
